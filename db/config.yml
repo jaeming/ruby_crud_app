@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: lala_resa
+  username: 
+  password: 
+  host: localhost
+  reconnect: true
+
+development:
+  <<: *default
+  database: lala_resa
+
+test:
+  <<: *default
+  database: lala_resa_test
+
+
+production:
+  <<: *default
+  database: benji_production
